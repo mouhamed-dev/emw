@@ -75,7 +75,7 @@
 
     <!-- Custom CSS for Premium Finish -->
     <style>
-        /* Smooth Scrollbar */
+        /* Smooth Scrollbar Customization */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -92,6 +92,37 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #3A1F0F;
         }
+
+        /* Standard CSS Scrollbar for Firefox & modern browsers */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #B88732 #F7EBDD;
+        }
+
+        /* Strict Video Containment during playback (fixes GPU overflow & corner bleeding) */
+        .video-container {
+            position: relative;
+            overflow: hidden !important;
+            border-radius: 1.5rem !important; /* rounded-3xl */
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            -webkit-mask-image: -webkit-radial-gradient(white, black);
+            mask-image: radial-gradient(white, black);
+            isolation: isolate;
+            contain: paint;
+        }
+
+        .video-container video {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100% !important;
+            max-height: 100% !important;
+            object-fit: cover !important;
+            border-radius: inherit;
+        }
+
 
         /* Ambient Gold Shimmer */
         .gold-gradient-text {
@@ -362,6 +393,11 @@
                         <i class="fas fa-star text-brand-gold text-xs"></i>
                         Une marque sénégalaise
                     </span>
+                    <span class="mx-3 text-brand-gold/40 lg:hidden">•</span>
+                    <span class="flex items-center gap-2 lg:hidden">
+                        <i class="fas fa-award text-brand-gold text-xs"></i>
+                        Une saveur délicieuse
+                    </span>
                 </div>
 
             </div>
@@ -448,21 +484,6 @@
                             <img src="images/bg-eutou-mame.jpeg" alt="Gamme Mbouraké Eutou Mame Wouly"
                                 class="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700"
                                 onerror="this.src='bg-eutou-mame.jpeg'">
-
-                            <!-- Floating Brand Seal -->
-                            <div
-                                class="absolute bottom-6 right-6 bg-brand-choc/90 backdrop-blur-md text-brand-offwhite px-4 py-3 rounded-2xl border border-brand-gold/60 shadow-lg flex items-center gap-3">
-                                <div
-                                    class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center border border-brand-gold/40 text-brand-gold">
-                                    <i class="fas fa-award text-lg"></i>
-                                </div>
-                                <div>
-                                    <p class="text-xs uppercase tracking-wider text-brand-goldPale font-medium">Garantie
-                                    </p>
-                                    <p class="text-sm font-bold text-brand-offwhite font-serif">100% Terroir Sénégalais
-                                    </p>
-                                </div>
-                            </div>
                         </div>
 
                     </div>
@@ -768,8 +789,8 @@
                     <!-- Video Player 1 -->
                     <div class="lg:col-span-7">
                         <div
-                            class="relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
-                            <video id="videoPrep" class="w-full h-full object-cover" controls preload="metadata"
+                            class="video-container relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
+                            <video id="videoPrep" class="absolute inset-0 w-full h-full object-cover" controls playsinline webkit-playsinline preload="metadata"
                                 poster="images/bg-eutou-mame.jpeg">
                                 <source src="videos/preparation.mp4" type="video/mp4">
                                 <source src="images/preparation.mp4" type="video/mp4">
@@ -778,10 +799,10 @@
 
                             <!-- Subtle decorative corner accents -->
                             <div
-                                class="pointer-events-none absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-brand-gold/60 rounded-tl-lg">
+                                class="pointer-events-none absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-brand-gold/60 rounded-tl-lg z-10">
                             </div>
                             <div
-                                class="pointer-events-none absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-brand-gold/60 rounded-br-lg">
+                                class="pointer-events-none absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-brand-gold/60 rounded-br-lg z-10">
                             </div>
                         </div>
                     </div>
@@ -799,8 +820,8 @@
                     <!-- Video Player 2 -->
                     <div class="lg:col-span-7 order-2 lg:order-1">
                         <div
-                            class="relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
-                            <video id="videoPack" class="w-full h-full object-cover" controls preload="metadata"
+                            class="video-container relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
+                            <video id="videoPack" class="absolute inset-0 w-full h-full object-cover" controls playsinline webkit-playsinline preload="metadata"
                                 poster="images/bg-eutou-mame.jpeg">
                                 <source src="videos/packaging.mp4" type="video/mp4">
                                 <source src="images/prsentation.mp4" type="video/mp4">
@@ -810,10 +831,10 @@
 
                             <!-- Corner accents -->
                             <div
-                                class="pointer-events-none absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-brand-gold/60 rounded-tr-lg">
+                                class="pointer-events-none absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-brand-gold/60 rounded-tr-lg z-10">
                             </div>
                             <div
-                                class="pointer-events-none absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-brand-gold/60 rounded-bl-lg">
+                                class="pointer-events-none absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-brand-gold/60 rounded-bl-lg z-10">
                             </div>
                         </div>
                     </div>
@@ -1487,7 +1508,7 @@
             name: "Eutou Mame Wouly",
             tagline: "Le goût authentique, l'héritage de Mame Wouly",
             // Remplacez par le numéro WhatsApp officiel au format international sans espace (ex: "221771234567")
-            whatsapp: "221768191781",
+            whatsapp: "+221 76 819 17 81",
             phone: "+221 76 819 17 81",
             email: "#",
             address: "Dakar, Guédiawaye",

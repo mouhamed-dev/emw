@@ -6,7 +6,7 @@
 const brand = {
   name: "Eutou Mame Wouly",
   tagline: "Le goût authentique, l'héritage de Mame Wouly",
-  whatsapp: "221768191781",
+  whatsapp: "+221 76 819 17 81",
   phone: "+221 76 819 17 81",
   email: "#",
   address: "Dakar, Sénégal",
