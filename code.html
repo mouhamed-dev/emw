@@ -1,0 +1,101 @@
+<section id="galerie" class="py-24 sm:py-32 bg-brand-cream/30 pattern-bg relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-choc font-semibold text-xs tracking-wider uppercase mb-3">
+                    <i class="fas fa-camera text-brand-gold text-xs"></i>
+                    <span>Galerie photos</span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-4">
+                    L'Univers de la Marque
+                </h2>
+                <p class="font-sans text-base sm:text-lg text-brand-text/80">
+                    Plongez au cœur de l'esthétique soignée et chaleureuse d'Eutou Mame Wouly. Cliquez sur une image
+                    pour l'agrandir.
+                </p>
+            </div>
+
+            <!-- Asymmetrical Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+                <!-- Image 1: Main Product / Packaging Range -->
+                <div onclick="openLightbox('images/bg-eutou-mame.jpeg', 'Gamme complète de packaging Eutou Mame Wouly')"
+                    class="cursor-pointer group relative rounded-3xl overflow-hidden shadow-card border border-brand-gold/30 bg-white h-72 sm:h-80">
+                    <img src="images/bg-eutou-mame.jpeg" alt="Packaging Mbouraké"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        onerror="this.src='bg-eutou-mame.jpeg'">
+                    <div
+                        class="absolute inset-0 bg-brand-chocDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                        <span
+                            class="w-12 h-12 rounded-full bg-brand-gold/90 text-brand-chocDark flex items-center justify-center text-lg shadow-lg">
+                            <i class="fas fa-magnifying-glass-plus"></i>
+                        </span>
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 right-3 text-xs font-medium text-white bg-brand-chocDark/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-brand-gold/30">
+                        La Gamme Complète
+                    </div>
+                </div>
+
+                <!-- Image 2: Founder with Product -->
+                <div onclick="openLightbox('images/WhatsApp Image 2026-09-24 at 13.58.08.jpeg', 'Roumana Toure présentant le Mbouraké')"
+                    class="cursor-pointer group relative rounded-3xl overflow-hidden shadow-card border border-brand-gold/30 bg-white h-72 sm:h-80">
+                    <img src="images/WhatsApp Image 2026-09-24 at 13.58.08.jpeg" alt="Fondatrice avec le produit"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        onerror="this.src='WhatsApp Image 2026-09-24 at 13.58.08.jpeg'">
+                    <div
+                        class="absolute inset-0 bg-brand-chocDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                        <span
+                            class="w-12 h-12 rounded-full bg-brand-gold/90 text-brand-chocDark flex items-center justify-center text-lg shadow-lg">
+                            <i class="fas fa-magnifying-glass-plus"></i>
+                        </span>
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 right-3 text-xs font-medium text-white bg-brand-chocDark/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-brand-gold/30">
+                        La Fondatrice & Le Produit
+                    </div>
+                </div>
+
+                <!-- Image 3: Presentation Document -->
+                <div onclick="openLightbox('images/presentation.jpeg', 'Présentation institutionnelle et histoire de la fondatrice')"
+                    class="cursor-pointer group relative rounded-3xl overflow-hidden shadow-card border border-brand-gold/30 bg-white h-72 sm:h-80">
+                    <img src="images/presentation.jpeg" alt="Présentation officielle Eutou Mame Wouly"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        onerror="this.src='presentation.jpeg'">
+                    <div
+                        class="absolute inset-0 bg-brand-chocDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                        <span
+                            class="w-12 h-12 rounded-full bg-brand-gold/90 text-brand-chocDark flex items-center justify-center text-lg shadow-lg">
+                            <i class="fas fa-magnifying-glass-plus"></i>
+                        </span>
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 right-3 text-xs font-medium text-white bg-brand-chocDark/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-brand-gold/30">
+                        Histoire & Vision
+                    </div>
+                </div>
+
+                <!-- Image 4: Official Emblem / Logo -->
+                <div onclick="openLightbox('images/logo.png', 'Emblème officiel et détails gourmands du Mbouraké')"
+                    class="cursor-pointer group relative rounded-3xl overflow-hidden shadow-card border border-brand-gold/30 bg-white h-72 sm:h-80 flex items-center justify-center p-4">
+                    <img src="images/logo.png" alt="Emblème officiel Eutou Mame Wouly"
+                        class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+                        onerror="this.src='logo.png'">
+                    <div
+                        class="absolute inset-0 bg-brand-chocDark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                        <span
+                            class="w-12 h-12 rounded-full bg-brand-gold/90 text-brand-chocDark flex items-center justify-center text-lg shadow-lg">
+                            <i class="fas fa-magnifying-glass-plus"></i>
+                        </span>
+                    </div>
+                    <div
+                        class="absolute bottom-3 left-3 right-3 text-xs font-medium text-white bg-brand-chocDark/80 backdrop-blur-sm px-3 py-1.5 rounded-xl border border-brand-gold/30">
+                        L'Emblème de Marque
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>

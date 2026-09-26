@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth scroll-pt-20 lg:scroll-pt-24">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eutou Mame Wouly | Mbouraké Sénégal</title>
+
+    <!-- SEO & Meta Tags -->
+    <meta name="description"
+        content="Découvrez Eutou Mame Wouly, une marque sénégalaise spécialisée dans le Mbouraké, entre tradition, savoir-faire familial et modernité.">
+    <meta name="keywords"
+        content="Mbouraké, Eutou Mame Wouly, Sénégal, gastronomie sénégalaise, produit artisanal, Mame Wouly, Roumana Toure">
+    <meta name="author" content="Eutou Mame Wouly">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eutou Mame Wouly | Mbouraké Sénégal">
+    <meta property="og:description"
+        content="Le goût authentique, l’héritage de Mame Wouly. Spécialité traditionnelle sénégalaise d'exception.">
+    <meta property="og:image" content="images/bg-eutou-mame.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Alex+Brush&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            chocDark: '#24150C',    // Brun foncé
+                            choc: '#3A1F0F',        // Brun chocolat profond
+                            chocLight: '#522D16',   // Brun moyen
+                            gold: '#B88732',        // Doré
+                            goldLight: '#D6AA55',   // Doré clair
+                            goldPale: '#E5C378',    // Doré doux
+                            cream: '#F7EBDD',       // Crème
+                            beige: '#E9D2B3',       // Beige naturel
+                            offwhite: '#FFF9F1',    // Blanc cassé
+                            text: '#2A1A10',        // Texte principal
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        script: ['"Alex Brush"', 'cursive'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -10px rgba(58, 31, 15, 0.08)',
+                        'card': '0 15px 35px -5px rgba(58, 31, 15, 0.07), 0 5px 15px -3px rgba(184, 135, 50, 0.05)',
+                        'gold': '0 10px 25px -5px rgba(184, 135, 50, 0.25)',
+                        'gold-lg': '0 20px 40px -10px rgba(184, 135, 50, 0.35)',
+                        'dark-elevated': '0 25px 50px -12px rgba(24, 14, 8, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Premium Finish -->
+    <style>
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #F7EBDD;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #B88732;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3A1F0F;
+        }
+
+        /* Ambient Gold Shimmer */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #B88732 0%, #D6AA55 50%, #B88732 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #B88732 0%, #D6AA55 50%, #996C24 100%);
+        }
+
+        .gold-gradient-subtle {
+            background: linear-gradient(135deg, rgba(214, 170, 85, 0.15) 0%, rgba(184, 135, 50, 0.05) 100%);
+        }
+
+        /* Fine Gold Borders */
+        .border-gold-subtle {
+            border: 1px solid rgba(184, 135, 50, 0.22);
+        }
+
+        .border-gold-strong {
+            border: 1px solid rgba(184, 135, 50, 0.55);
+        }
+
+        /* Animations for Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle Pulsing Badge */
+        @keyframes pulse-subtle {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.95;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        .animate-pulse-subtle {
+            animation: pulse-subtle 3s ease-in-out infinite;
+        }
+
+        /* Floating WhatsApp Button Pulse */
+        @keyframes wa-pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .wa-floating-btn {
+            animation: wa-pulse 2.2s infinite;
+        }
+
+        /* Subtle traditional geometric pattern backdrop */
+        .pattern-bg {
+            background-color: #FFF9F1;
+            background-image: radial-gradient(rgba(184, 135, 50, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .pattern-dark {
+            background-color: #24150C;
+            background-image: radial-gradient(rgba(214, 170, 85, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+
+        /* Custom video play overlay */
+        .video-wrapper video::-webkit-media-controls-panel {
+            background-color: rgba(36, 21, 12, 0.7);
+        }
+
+        /* Lightbox Modal Animation */
+        .lightbox-backdrop {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-offwhite text-brand-text font-sans antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- ========================================================================= -->
+    <!-- 1. NAVBAR PREMIUM -->
+    <!-- ========================================================================= -->
+    <header id="mainNavbar"
+        class="fixed top-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md shadow-soft border-b border-brand-gold/25 py-3 sm:py-3.5 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto flex items-center justify-between relative z-50">
+
+            <!-- Brand Logo & Name -->
+            <a href="#hero" class="flex items-center gap-3.5 group" aria-label="Eutou Mame Wouly - Accueil">
+                <div
+                    class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden p-0.5 border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 bg-white">
+                    <img src="images/logo.png" alt="Logo Eutou Mame Wouly"
+                        class="w-full h-full object-cover rounded-full" onerror="this.src='logo.png'">
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="font-serif text-lg sm:text-xl font-bold tracking-tight text-brand-choc leading-tight group-hover:text-brand-gold transition-colors">
+                        EUTOU MAME WOULY
+                    </span>
+                    <span class="font-sans text-[11px] sm:text-xs text-brand-gold font-medium tracking-wide uppercase">
+                        Mbouraké Traditionnel
+                    </span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-brand-choc">
+                <a href="#hero"
+                    class="hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Accueil</a>
+                <a href="#histoire"
+                    class="hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Notre
+                    histoire</a>
+                <a href="#formats"
+                    class="hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Nos
+                    formats</a>
+                <a href="#videos"
+                    class="hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">Savoir-faire</a>
+                <a href="#fondatrice"
+                    class="hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-brand-gold hover:after:w-full after:transition-all after:duration-300">La
+                    fondatrice</a>
+            </nav>
+
+            <!-- Right Action Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="#commander"
+                    class="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-brand-choc text-brand-offwhite text-sm font-semibold tracking-wide border border-brand-gold/60 shadow-md hover:bg-brand-gold hover:text-brand-chocDark hover:border-brand-choc transition-all duration-300 group">
+                    <i
+                        class="fab fa-whatsapp text-brand-gold group-hover:text-brand-chocDark text-base transition-colors"></i>
+                    <span>Commander</span>
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation"
+                class="lg:hidden w-11 h-11 rounded-full flex flex-col items-center justify-center gap-1.5 border border-brand-gold/40 text-brand-choc hover:bg-brand-cream/50 transition-colors">
+                <span class="w-5 h-[2px] bg-brand-choc transition-transform origin-center" id="menuLine1"></span>
+                <span class="w-5 h-[2px] bg-brand-choc transition-opacity" id="menuLine2"></span>
+                <span class="w-5 h-[2px] bg-brand-choc transition-transform origin-center" id="menuLine3"></span>
+            </button>
+
+        </div>
+
+        <!-- Mobile Slide-out / Dropdown Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden fixed inset-x-4 top-[74px] sm:top-20 z-50 bg-[#FFF9F1] border-2 border-brand-gold/40 rounded-3xl p-6 shadow-2xl transition-all duration-300 max-h-[calc(100vh-90px)] overflow-y-auto"
+            style="background-color: #FFF9F1;">
+            <div class="flex flex-col gap-4 text-left font-medium text-brand-choc">
+                <a href="#hero"
+                    class="mobile-nav-link py-2.5 text-lg hover:text-brand-gold transition-colors border-b border-brand-beige/40">Accueil</a>
+                <a href="#histoire"
+                    class="mobile-nav-link py-2.5 text-lg hover:text-brand-gold transition-colors border-b border-brand-beige/40">Notre
+                    histoire</a>
+                <a href="#formats"
+                    class="mobile-nav-link py-2.5 text-lg hover:text-brand-gold transition-colors border-b border-brand-beige/40">Nos
+                    formats</a>
+                <a href="#videos"
+                    class="mobile-nav-link py-2.5 text-lg hover:text-brand-gold transition-colors border-b border-brand-beige/40">Savoir-faire
+                    en vidéo</a>
+                <a href="#fondatrice"
+                    class="mobile-nav-link py-2.5 text-lg hover:text-brand-gold transition-colors border-b border-brand-beige/40">La
+                    fondatrice</a>
+                <!-- <div class="pt-3">
+                    <a href="#commander"
+                        class="mobile-nav-link inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-brand-choc text-brand-offwhite font-semibold border border-brand-gold/60 shadow-lg hover:bg-brand-gold hover:text-brand-chocDark transition-colors">
+                        <i class="fab fa-whatsapp text-brand-gold text-lg"></i>
+                        <span>Commander maintenant</span>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- 2. HERO SPECTACULAIRE -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative min-h-[90vh] lg:min-h-screen flex items-center pt-28 pb-16 overflow-hidden">
+
+        <!-- Background Image with Curated Deep Warm Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/bg-eutou-mame.jpeg" alt="Gamme Eutou Mame Wouly Mbouraké"
+                class="w-full h-full object-cover object-center scale-105 transform motion-safe:animate-pulse-subtle"
+                onerror="this.src='bg-eutou-mame.jpeg'">
+            <!-- Multi-stop Gradient for Ultra-Legibility & Royal Warmth -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-brand-chocDark/95 via-brand-choc/85 to-brand-chocDark/70">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-chocDark via-transparent to-brand-chocDark/60">
+            </div>
+        </div>
+
+        <!-- Hero Content Container -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full">
+            <div class="max-w-3xl">
+
+                <!-- Label Pill -->
+                <div
+                    class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/50 backdrop-blur-md mb-6 shadow-sm">
+                    <span class="text-xs sm:text-sm font-semibold tracking-widest text-brand-goldPale uppercase">
+                        Savoir-faire sénégalais
+                    </span>
+                </div>
+
+                <!-- Grand Titre -->
+                <h1
+                    class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-brand-offwhite leading-[1.12] mb-6 tracking-tight">
+                    Le goût authentique, <br>
+                    <span class="italic font-display font-medium text-brand-goldPale">l’héritage de Mame Wouly.</span>
+                </h1>
+
+                <!-- Texte descriptif -->
+                <p
+                    class="font-sans text-base sm:text-lg md:text-xl text-brand-cream/90 font-light leading-relaxed mb-8 max-w-2xl">
+                    Découvrez Eutou Mame Wouly, une marque qui fait revivre le goût authentique du <strong
+                        class="text-brand-offwhite font-medium">Mbouraké</strong> à travers un savoir-faire familial
+                    transmis avec passion.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+                    <a href="#commander"
+                        class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-brand-gold to-brand-goldLight text-brand-chocDark font-bold text-base shadow-gold hover:shadow-gold-lg hover:brightness-110 active:scale-95 transition-all duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Commander maintenant</span>
+                    </a>
+                    <a href="#formats"
+                        class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-brand-offwhite font-semibold text-base border border-brand-gold/40 backdrop-blur-md active:scale-95 transition-all duration-300">
+                        <span>Découvrir nos formats</span>
+                        <i class="fas fa-arrow-down text-brand-gold text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Tagline / Trust Line -->
+                <div
+                    class="pt-6 border-t border-brand-gold/25 flex flex-wrap items-center gap-y-2 text-xs sm:text-sm text-brand-cream/80 font-medium">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-brand-gold text-xs"></i>
+                        Une recette traditionnelle
+                    </span>
+                    <span class="mx-3 text-brand-gold/40">•</span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-heart text-brand-gold text-xs"></i>
+                        Un savoir-faire familial
+                    </span>
+                    <span class="mx-3 text-brand-gold/40">•</span>
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-star text-brand-gold text-xs"></i>
+                        Une marque sénégalaise
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. INTRODUCTION DE LA MARQUE -->
+    <!-- ========================================================================= -->
+    <section id="histoire" class="py-24 sm:py-32 bg-brand-cream/30 pattern-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                <!-- Left Column: Story & Verifiable Values -->
+                <div class="lg:col-span-7 reveal order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-choc font-semibold text-xs tracking-wider uppercase mb-4">
+                        <i class="fas fa-feather-pointed text-brand-gold text-xs"></i>
+                        <span>Notre histoire</span>
+                    </div>
+
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-6">
+                        Une tradition qui traverse les générations
+                    </h2>
+
+                    <div class="space-y-4 text-base sm:text-lg text-brand-text/85 leading-relaxed font-normal">
+                        <p>
+                            <strong class="font-semibold text-brand-choc">Eutou Mame Wouly</strong> est une entreprise
+                            spécialisée dans la production et la commercialisation du <strong
+                                class="text-brand-choc font-semibold">Mbouraké</strong>, une spécialité traditionnelle
+                            sénégalaise appréciée par les enfants, les adultes et les personnes âgées.
+                        </p>
+                        <p>
+                            Élaboré à partir d’ingrédients nobles – du pain croustillant finement concassé, une pâte
+                            d’arachide pure et onctueuse, une note de chocolat gourmand et un juste soupçon de sucre –
+                            notre Mbouraké réveille des souvenirs d’enfance uniques. Une déclinaison sans sucre est
+                            également proposée pour répondre à toutes les envies.
+                        </p>
+                        <p>
+                            La marque souhaite valoriser ce produit traditionnel tout en le présentant sous une forme
+                            moderne, pratique et accessible, adaptée au rythme de vie d’aujourd’hui sans jamais en
+                            altérer l’âme.
+                        </p>
+                    </div>
+
+                    <!-- Verifiable Feature Highlights -->
+                    <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 mt-8 pt-6 border-t border-brand-beige">
+                        <div class="p-4 rounded-2xl bg-white border border-brand-gold/25 shadow-soft">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-brand-cream flex items-center justify-center text-brand-gold mb-3">
+                                <i class="fas fa-mortar-pestle text-lg"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-brand-choc text-base mb-1">Recette Familiale</h4>
+                            <p class="text-xs text-brand-text/70 leading-snug">Inspirée de la préparation ancestrale à
+                                l'ambiance chaleureuse.</p>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-white border border-brand-gold/25 shadow-soft">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-brand-cream flex items-center justify-center text-brand-gold mb-3">
+                                <i class="fas fa-seedling text-lg"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-brand-choc text-base mb-1">Option Sans Sucre</h4>
+                            <p class="text-xs text-brand-text/70 leading-snug">Disponible pour convenir aux besoins et
+                                préférences de chacun.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Composition with Official Packaging -->
+                <div class="lg:col-span-5 reveal order-1 lg:order-2">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+
+                        <!-- Golden Glow Frame Behind -->
+                        <div
+                            class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-gold/30 via-brand-beige to-brand-gold/10 -rotate-2 transform">
+                        </div>
+
+                        <!-- Image Card -->
+                        <div
+                            class="relative rounded-3xl overflow-hidden shadow-card border border-brand-gold/40 bg-white p-3">
+                            <img src="images/bg-eutou-mame.jpeg" alt="Gamme Mbouraké Eutou Mame Wouly"
+                                class="w-full h-auto rounded-2xl object-cover hover:scale-105 transition-transform duration-700"
+                                onerror="this.src='bg-eutou-mame.jpeg'">
+
+                            <!-- Floating Brand Seal -->
+                            <div
+                                class="absolute bottom-6 right-6 bg-brand-choc/90 backdrop-blur-md text-brand-offwhite px-4 py-3 rounded-2xl border border-brand-gold/60 shadow-lg flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center border border-brand-gold/40 text-brand-gold">
+                                    <i class="fas fa-award text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-brand-goldPale font-medium">Garantie
+                                    </p>
+                                    <p class="text-sm font-bold text-brand-offwhite font-serif">100% Terroir Sénégalais
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. NOS FORMATS -->
+    <!-- ========================================================================= -->
+    <section id="formats" class="py-24 sm:py-32 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-choc font-semibold text-xs tracking-wider uppercase mb-3">
+                    <i class="fas fa-box-open text-brand-gold text-xs"></i>
+                    <span>La gamme de produits</span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-4">
+                    Choisissez votre format
+                </h2>
+                <p class="font-sans text-base sm:text-lg text-brand-text/80">
+                    Le même goût authentique, dans un format adapté à vos envies et vos moments de partage.
+                </p>
+                <div class="w-20 h-1 bg-brand-gold/40 mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <!-- Products Grid (4 Cards in ordered sequence) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch" id="productsContainer">
+
+                <!-- CARD 1 : POT NOMADE 500 FCFA -->
+                <div
+                    class="reveal flex flex-col justify-between bg-white rounded-3xl p-6 border border-brand-gold/30 shadow-card hover:-translate-y-2 hover:shadow-gold-lg transition-all duration-400 group relative">
+                    <div>
+                        <!-- Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-brand-cream text-brand-choc border border-brand-gold/30">
+                                POT NOMADE
+                            </span>
+                            <span class="text-xs text-brand-gold font-medium">Individuel</span>
+                        </div>
+
+                        <!-- Product Visual -->
+                        <div
+                            class="relative w-full h-80 sm:h-64 lg:h-56 rounded-2xl overflow-hidden bg-brand-cream/30 mb-6 flex items-center justify-center p-3 border border-brand-beige/50">
+                            <img src="images/pot.png" alt="Format Pot Nomade 500 FCFA"
+                                class="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='images/pot.png'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-chocDark/40 to-transparent"></div>
+                            <span
+                                class="absolute bottom-3 left-3 text-xs font-serif font-bold text-white bg-brand-choc/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-brand-gold/30">
+                                Pot Nomade 500 FCFA
+                            </span>
+                        </div>
+
+                        <!-- Titles & Descriptions -->
+                        <h3
+                            class="font-serif text-2xl font-bold text-brand-choc mb-1 group-hover:text-brand-gold transition-colors">
+                            Pot Nomade
+                        </h3>
+                        <p class="text-sm font-medium text-brand-gold mb-3">Format Découverte</p>
+                        <p class="text-sm text-brand-text/75 leading-relaxed mb-6">
+                            La portion nomade compacte et pratique à emporter partout au bureau, à l'école ou en déplacement pour savourer le croustillant de Mame Wouly.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Price Block -->
+                        <div class="pt-4 border-t border-brand-beige flex items-baseline justify-between mb-5">
+                            <span class="text-xs text-brand-text/60 font-medium">Prix unitaire</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-serif font-bold text-brand-choc" id="price-pot">500</span>
+                                <span class="text-xs font-bold text-brand-gold uppercase">FCFA</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Action Button -->
+                        <button onclick="handleDirectOrder('pot500')"
+                            class="w-full py-3.5 px-4 rounded-xl bg-brand-choc text-brand-offwhite font-semibold text-sm tracking-wide border border-brand-gold/50 flex items-center justify-center gap-2 hover:bg-brand-gold hover:text-brand-chocDark transition-all duration-300 shadow-sm active:scale-98">
+                            <i class="fab fa-whatsapp text-brand-gold text-base"></i>
+                            <span>Commander à 500 FCFA</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 2 : MAXI POT NOMADE 1000 FCFA -->
+                <div
+                    class="reveal flex flex-col justify-between bg-white rounded-3xl p-6 border border-brand-gold/30 shadow-card hover:-translate-y-2 hover:shadow-gold-lg transition-all duration-400 group relative">
+                    <div>
+                        <!-- Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-brand-cream text-brand-choc border border-brand-gold/30">
+                                POT 1000F
+                            </span>
+                            <span class="text-xs text-brand-gold font-medium">Gourmand</span>
+                        </div>
+
+                        <!-- Product Visual -->
+                        <div
+                            class="relative w-full h-80 sm:h-64 lg:h-56 rounded-2xl overflow-hidden bg-brand-cream/30 mb-6 flex items-center justify-center p-3 border border-brand-beige/50">
+                            <img src="images/pot1000.png" alt="Format Maxi Pot Dôme 1000 FCFA"
+                                class="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='images/pot1000.png'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-chocDark/40 to-transparent"></div>
+                            <span
+                                class="absolute bottom-3 left-3 text-xs font-serif font-bold text-white bg-brand-choc/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-brand-gold/30">
+                                Maxi Pot Dôme 1.000 FCFA
+                            </span>
+                        </div>
+
+                        <!-- Titles & Descriptions -->
+                        <h3
+                            class="font-serif text-2xl font-bold text-brand-choc mb-1 group-hover:text-brand-gold transition-colors">
+                            Maxi Pot Gourmand
+                        </h3>
+                        <p class="text-sm font-medium text-brand-gold mb-3">Format Dôme Nomade</p>
+                        <p class="text-sm text-brand-text/75 leading-relaxed mb-6">
+                            Le double de plaisir sous un dôme généreux ! Idéal pour les pauses gourmandes prolongées et les vrais passionnés de Mbouraké croustillant.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Price Block -->
+                        <div class="pt-4 border-t border-brand-beige flex items-baseline justify-between mb-5">
+                            <span class="text-xs text-brand-text/60 font-medium">Prix unitaire</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-serif font-bold text-brand-choc" id="price-pot1000">1.000</span>
+                                <span class="text-xs font-bold text-brand-gold uppercase">FCFA</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Action Button -->
+                        <button onclick="handleDirectOrder('pot1000')"
+                            class="w-full py-3.5 px-4 rounded-xl bg-brand-choc text-brand-offwhite font-semibold text-sm tracking-wide border border-brand-gold/50 flex items-center justify-center gap-2 hover:bg-brand-gold hover:text-brand-chocDark transition-all duration-300 shadow-sm active:scale-98">
+                            <i class="fab fa-whatsapp text-brand-gold text-base"></i>
+                            <span>Commander ce format</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 3 : SACHET 500 G -->
+                <div
+                    class="reveal flex flex-col justify-between bg-white rounded-3xl p-6 border border-brand-gold/30 shadow-card hover:-translate-y-2 hover:shadow-gold-lg transition-all duration-400 group relative">
+                    <div>
+                        <!-- Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-brand-cream text-brand-choc border border-brand-gold/30">
+                                SACHET 500 G
+                            </span>
+                            <span class="text-xs text-brand-gold font-medium">Usage quotidien</span>
+                        </div>
+
+                        <!-- Product Visual -->
+                        <div
+                            class="relative w-full h-80 sm:h-64 lg:h-56 rounded-2xl overflow-hidden bg-brand-cream/30 mb-6 flex items-center justify-center p-3 border border-brand-beige/50">
+                            <img src="images/500g.png" alt="Format 500 G Format Familial"
+                                class="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='images/500g.png'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-chocDark/40 to-transparent"></div>
+                            <span
+                                class="absolute bottom-3 left-3 text-xs font-serif font-bold text-white bg-brand-choc/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-brand-gold/30">
+                                Sachet Kraft Zippé 500g
+                            </span>
+                        </div>
+
+                        <!-- Titles & Descriptions -->
+                        <h3
+                            class="font-serif text-2xl font-bold text-brand-choc mb-1 group-hover:text-brand-gold transition-colors">
+                            Format familial
+                        </h3>
+                        <p class="text-sm font-medium text-brand-gold mb-3">Mbouraké 500 g</p>
+                        <p class="text-sm text-brand-text/75 leading-relaxed mb-6">
+                            Un sachet kraft zippé refermable qui préserve toute la fraîcheur et le croquant au quotidien, au petit-déjeuner ou au goûter avec vos proches.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Price Block -->
+                        <div class="pt-4 border-t border-brand-beige flex items-baseline justify-between mb-5">
+                            <span class="text-xs text-brand-text/60 font-medium">Prix unitaire</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-serif font-bold text-brand-choc" id="price-500g">1.500</span>
+                                <span class="text-xs font-bold text-brand-gold uppercase">FCFA</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Action Button -->
+                        <button onclick="handleDirectOrder('sachet500')"
+                            class="w-full py-3.5 px-4 rounded-xl bg-brand-choc text-brand-offwhite font-semibold text-sm tracking-wide border border-brand-gold/50 flex items-center justify-center gap-2 hover:bg-brand-gold hover:text-brand-chocDark transition-all duration-300 shadow-sm active:scale-98">
+                            <i class="fab fa-whatsapp text-brand-gold text-base"></i>
+                            <span>Commander ce format</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD 4 : SACHET 1 KG -->
+                <div
+                    class="reveal flex flex-col justify-between bg-white rounded-3xl p-6 border border-brand-gold/30 shadow-card hover:-translate-y-2 hover:shadow-gold-lg transition-all duration-400 group relative">
+                    <div>
+                        <!-- Badge -->
+                        <div class="flex items-center justify-between mb-4">
+                            <span
+                                class="text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-brand-cream text-brand-choc border border-brand-gold/30">
+                                SACHET 1 KG
+                            </span>
+                            <span class="text-xs text-brand-gold font-medium">Partage familial</span>
+                        </div>
+
+                        <!-- Product Visual -->
+                        <div
+                            class="relative w-full h-80 sm:h-64 lg:h-56 rounded-2xl overflow-hidden bg-brand-cream/30 mb-6 flex items-center justify-center p-3 border border-brand-beige/50">
+                            <img src="images/1kg.png" alt="Format 1 KG Grand Format"
+                                class="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition-transform duration-500"
+                                onerror="this.src='images/1kg.png'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-chocDark/40 to-transparent"></div>
+                            <span
+                                class="absolute bottom-3 left-3 text-xs font-serif font-bold text-white bg-brand-choc/80 backdrop-blur-sm px-3 py-1 rounded-lg border border-brand-gold/30">
+                                Grand Sachet Kraft Zippé
+                            </span>
+                        </div>
+
+                        <!-- Titles & Descriptions -->
+                        <h3
+                            class="font-serif text-2xl font-bold text-brand-choc mb-1 group-hover:text-brand-gold transition-colors">
+                            Grand format
+                        </h3>
+                        <p class="text-sm font-medium text-brand-gold mb-3">Mbouraké 1 kg</p>
+                        <p class="text-sm text-brand-text/75 leading-relaxed mb-6">
+                            Idéal pour les grandes familles et pour partager lors des grands rassemblements, cérémonies, fêtes ou moments conviviaux.
+                        </p>
+                    </div>
+
+                    <div>
+                        <!-- Price Block -->
+                        <div class="pt-4 border-t border-brand-beige flex items-baseline justify-between mb-5">
+                            <span class="text-xs text-brand-text/60 font-medium">Prix unitaire</span>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-2xl font-serif font-bold text-brand-choc" id="price-1kg">3.000</span>
+                                <span class="text-xs font-bold text-brand-gold uppercase">FCFA</span>
+                            </div>
+                        </div>
+
+                        <!-- Order Action Button -->
+                        <button onclick="handleDirectOrder('sachet1kg')"
+                            class="w-full py-3.5 px-4 rounded-xl bg-brand-choc text-brand-offwhite font-semibold text-sm tracking-wide border border-brand-gold/50 flex items-center justify-center gap-2 hover:bg-brand-gold hover:text-brand-chocDark transition-all duration-300 shadow-sm active:scale-98">
+                            <i class="fab fa-whatsapp text-brand-gold text-base"></i>
+                            <span>Commander ce format</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5 & 6. SECTION VIDÉOS (PRÉPARATION & PACKAGING) -->
+    <!-- ========================================================================= -->
+    <section id="videos"
+        class="py-24 sm:py-32 bg-brand-chocDark text-brand-offwhite pattern-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <!-- Video 1: Préparation -->
+            <div class="mb-24 reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+                    <div class="lg:col-span-5">
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-goldPale font-semibold text-xs tracking-wider uppercase mb-4">
+                            <i class="fas fa-play text-brand-gold text-xs"></i>
+                            <span>Vidéo de préparation</span>
+                        </div>
+
+                        <h2
+                            class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-offwhite leading-tight mb-4">
+                            Du savoir-faire à chaque bouchée
+                        </h2>
+
+                        <p class="font-sans text-base sm:text-lg text-brand-cream/80 mb-6 leading-relaxed">
+                            Découvrez les étapes qui donnent naissance à notre Mbouraké. Préparé avec soin, dans le
+                            respect d'un savoir-faire traditionnel.
+                        </p>
+
+                        <div
+                            class="p-4 rounded-2xl bg-brand-choc/60 border border-brand-gold/20 text-sm text-brand-beige flex items-start gap-3">
+                            <i class="fas fa-info-circle text-brand-gold text-lg mt-0.5"></i>
+                            <p>
+                                Chaque geste honore la gestuelle ancestrale, garantissant une régularité et une texture
+                                unique appréciée de tous.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Video Player 1 -->
+                    <div class="lg:col-span-7">
+                        <div
+                            class="relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
+                            <video id="videoPrep" class="w-full h-full object-cover" controls preload="metadata"
+                                poster="images/bg-eutou-mame.jpeg">
+                                <source src="videos/preparation.mp4" type="video/mp4">
+                                <source src="images/preparation.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture vidéo.
+                            </video>
+
+                            <!-- Subtle decorative corner accents -->
+                            <div
+                                class="pointer-events-none absolute top-3 left-3 w-6 h-6 border-t-2 border-l-2 border-brand-gold/60 rounded-tl-lg">
+                            </div>
+                            <div
+                                class="pointer-events-none absolute bottom-3 right-3 w-6 h-6 border-b-2 border-r-2 border-brand-gold/60 rounded-br-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Subtle separator -->
+            <div class="w-full h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent my-16"></div>
+
+            <!-- Video 2: Packaging Final -->
+            <div class="reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+                    <!-- Video Player 2 -->
+                    <div class="lg:col-span-7 order-2 lg:order-1">
+                        <div
+                            class="relative rounded-3xl overflow-hidden border border-brand-gold/40 shadow-dark-elevated bg-black aspect-video group">
+                            <video id="videoPack" class="w-full h-full object-cover" controls preload="metadata"
+                                poster="images/bg-eutou-mame.jpeg">
+                                <source src="videos/packaging.mp4" type="video/mp4">
+                                <source src="images/prsentation.mp4" type="video/mp4">
+                                <source src="images/mbouraké.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture vidéo.
+                            </video>
+
+                            <!-- Corner accents -->
+                            <div
+                                class="pointer-events-none absolute top-3 right-3 w-6 h-6 border-t-2 border-r-2 border-brand-gold/60 rounded-tr-lg">
+                            </div>
+                            <div
+                                class="pointer-events-none absolute bottom-3 left-3 w-6 h-6 border-b-2 border-l-2 border-brand-gold/60 rounded-bl-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 order-1 lg:order-2">
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-goldPale font-semibold text-xs tracking-wider uppercase mb-4">
+                            <i class="fas fa-sparkles text-brand-gold text-xs"></i>
+                            <span>Conditionnement final</span>
+                        </div>
+
+                        <h2
+                            class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-offwhite leading-tight mb-4">
+                            Du produit à votre table
+                        </h2>
+
+                        <p class="font-sans text-base sm:text-lg text-brand-cream/80 mb-6 leading-relaxed">
+                            Découvrez le résultat final et notre manière de présenter le Mbouraké dans un packaging
+                            pensé pour préserver son identité et son caractère.
+                        </p>
+
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-2xl bg-brand-choc/60 border border-brand-gold/20">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold">
+                                <i class="fas fa-shield-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-serif font-bold text-brand-offwhite text-sm">Fraîcheur & Herméticité
+                                </h4>
+                                <p class="text-xs text-brand-cream/70">Des sachets zippés et pots sécurisés protégeant
+                                    la texture et le goût.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. HISTOIRE DE MAME WOULY (TIMELINE & STORYTELLING) -->
+    <!-- ========================================================================= -->
+    <section id="mame-wouly" class="py-24 sm:py-32 bg-brand-cream/40 pattern-bg relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <!-- Storytelling Header -->
+            <div class="max-w-3xl mx-auto text-center mb-20 reveal">
+                <span class="font-script text-3xl sm:text-4xl text-brand-gold block mb-2">Hommage & Mémoire</span>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-6">
+                    L’histoire derrière Eutou
+                </h2>
+                <div class="p-6 sm:p-8 rounded-3xl bg-white border border-brand-gold/30 shadow-card text-left relative">
+                    <i class="fas fa-quote-left text-3xl text-brand-gold/20 absolute top-4 left-6"></i>
+                    <p class="font-serif text-base sm:text-lg text-brand-choc leading-relaxed italic pl-6">
+                        « Le nom Eutou Mame Wouly rend hommage à une grand-mère maternelle et à son “Euteu” (cour), un
+                        lieu chargé d'histoire où le Mbouraké était préparé traditionnellement avec des fous rires, des
+                        coups de pilon et une ambiance chaleureuse.
+                    </p>
+                    <p class="font-serif text-base sm:text-lg text-brand-choc leading-relaxed italic pl-6 mt-3">
+                        Ces souvenirs ont fait naître une volonté : préserver cet héritage tout en le faisant découvrir
+                        sous une forme nouvelle. »
+                    </p>
+                </div>
+            </div>
+
+            <!-- Visual Timeline: Heritage -> Transmission -> Savoir-Faire -> Eutou Mame Wouly -> Nouvelle Génération -->
+            <div class="relative max-w-4xl mx-auto reveal hidden sm:block">
+
+                <!-- Center line for desktop -->
+                <div
+                    class="hidden md:block absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-0.5 bg-gradient-to-b from-brand-gold via-brand-goldLight to-brand-choc">
+                </div>
+
+                <div class="space-y-12">
+
+                    <!-- STEP 1: HÉRITAGE -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Étape 01</span>
+                            <h3 class="font-serif text-2xl font-bold text-brand-choc mb-2">HÉRITAGE</h3>
+                            <p class="text-sm text-brand-text/80 leading-relaxed">
+                                Les racines ancrées dans la cour familiale de Mame Wouly, au son rythmé des pilons et
+                                aux parfums de fête.
+                            </p>
+                        </div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-brand-choc border-4 border-brand-gold text-brand-gold flex items-center justify-center shadow-md">
+                            <i class="fas fa-seedling text-sm"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+
+                    <!-- STEP 2: TRANSMISSION -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-brand-gold border-4 border-brand-choc text-brand-chocDark flex items-center justify-center shadow-md">
+                            <i class="fas fa-hands-holding text-sm"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Étape 02</span>
+                            <h3 class="font-serif text-2xl font-bold text-brand-choc mb-2">TRANSMISSION</h3>
+                            <p class="text-sm text-brand-text/80 leading-relaxed">
+                                Un précieux secret de préparation partagé entre générations, avec l'amour du goût
+                                authentique et du partage.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: SAVOIR-FAIRE -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Étape 03</span>
+                            <h3 class="font-serif text-2xl font-bold text-brand-choc mb-2">SAVOIR-FAIRE</h3>
+                            <p class="text-sm text-brand-text/80 leading-relaxed">
+                                La maîtrise parfaite du dosage des ingrédients nobles : pain artisanal, pâte d’arachide
+                                pure, chocolat et sucre.
+                            </p>
+                        </div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-brand-choc border-4 border-brand-gold text-brand-gold flex items-center justify-center shadow-md">
+                            <i class="fas fa-mortar-pestle text-sm"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+
+                    <!-- STEP 4: EUTOU MAME WOULY -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-brand-gold border-4 border-brand-choc text-brand-chocDark flex items-center justify-center shadow-md">
+                            <i class="fas fa-crown text-sm"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Étape 04</span>
+                            <h3 class="font-serif text-2xl font-bold text-brand-choc mb-2">EUTOU MAME WOULY</h3>
+                            <p class="text-sm text-brand-text/80 leading-relaxed">
+                                La concrétisation d'une marque dédiée à honorer cette femme remarquable et à perpétuer
+                                son souvenir.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- STEP 5: UNE NOUVELLE GÉNÉRATION -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-6 md:gap-0">
+                        <div class="md:w-1/2 md:pr-12 md:text-right">
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Étape 05</span>
+                            <h3 class="font-serif text-2xl font-bold text-brand-choc mb-2">UNE NOUVELLE GÉNÉRATION</h3>
+                            <p class="text-sm text-brand-text/80 leading-relaxed">
+                                Un packaging soigné, moderne et pratique permettant à tous de savourer le Mbouraké à
+                                tout instant.
+                            </p>
+                        </div>
+                        <div
+                            class="relative z-10 w-12 h-12 rounded-full bg-brand-choc border-4 border-brand-gold text-brand-gold flex items-center justify-center shadow-md">
+                            <i class="fas fa-paper-plane text-sm"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. LA FONDATRICE (ROUMANA TOURE) -->
+    <!-- ========================================================================= -->
+    <section id="fondatrice" class="py-16 sm:py-24 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                <!-- Left Column: Portrait holding product -->
+                <div class="lg:col-span-5 reveal">
+                    <div class="relative max-w-md mx-auto">
+
+                        <!-- Golden Offset Frame -->
+                        <div
+                            class="absolute -inset-4 rounded-3xl bg-brand-beige border border-brand-gold/40 rotate-1 shadow-card">
+                        </div>
+
+                        <!-- Main Founder Photo with Product -->
+                        <div
+                            class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/50 bg-white">
+                            <img src="images/WhatsApp Image 2026-09-24 at 13.58.08.jpeg"
+                                alt="Roumana Toure avec le produit Eutou Mame Wouly"
+                                class="w-full h-auto object-cover hover:scale-102 transition-transform duration-700"
+                                onerror="this.src='WhatsApp Image 2026-09-24 at 13.58.08.jpeg'">
+
+                            <!-- Floating Pill on Image -->
+                            <div
+                                class="absolute bottom-4 left-4 right-4 bg-brand-chocDark/90 backdrop-blur-md p-4 rounded-xl border border-brand-gold/40 text-center">
+                                <p class="font-serif text-lg font-bold text-brand-offwhite">Roumana Toure</p>
+                                <p class="text-xs text-brand-gold font-medium uppercase tracking-wider">Fondatrice / PDG
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Editorial & Quote -->
+                <div class="lg:col-span-7 reveal">
+
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-choc font-semibold text-xs tracking-wider uppercase mb-4">
+                        <i class="fas fa-user text-brand-gold text-xs"></i>
+                        <span>Vision d'entreprise</span>
+                    </div>
+
+                    <h2
+                        class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-2">
+                        Derrière Eutou Mame Wouly
+                    </h2>
+
+                    <p class="text-sm font-semibold text-brand-gold mb-6 uppercase tracking-wider">
+                        Roumana Toure • Fondatrice / PDG
+                    </p>
+
+                    <p class="font-sans text-base sm:text-lg text-brand-text/85 leading-relaxed mb-6 font-normal">
+                        Eutou Mame Wouly est née d'une volonté de valoriser un savoir-faire familial et de faire
+                        découvrir davantage le Mbouraké à travers une marque moderne, authentique et profondément
+                        attachée à ses racines.
+                    </p>
+
+                    <!-- Quote Card -->
+                    <div
+                        class="p-6 sm:p-8 rounded-2xl bg-brand-cream/40 border-l-4 border-brand-gold border-y border-r border-brand-gold/20 mb-8 relative">
+                        <p class="font-serif text-xl sm:text-2xl text-brand-choc font-medium italic leading-snug">
+                            « Faire découvrir davantage le Mbouraké tout en valorisant l'héritage qui nous a été
+                            transmis. »
+                        </p>
+                        <span class="block mt-3 text-xs uppercase tracking-widest text-brand-gold font-bold">
+                            — Roumana Toure
+                        </span>
+                    </div>
+
+                    <!-- Secondary Image preview (Presentation PDF portrait) -->
+                    <div
+                        class="flex items-center gap-4 p-4 rounded-2xl bg-white border border-brand-gold/25 shadow-soft">
+                        <div class="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 border border-brand-gold/40">
+                            <img src="images/monument-de-la-renaissance.jpg" alt="Présentation Eutou Mame Wouly"
+                                class="w-full h-full object-cover object-top" onerror="this.src='presentation.jpeg'">
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-brand-choc text-sm">Engagement pour l'artisanat local
+                            </h4>
+                            <p class="text-xs text-brand-text/75 mt-0.5">Une ambition noble : faire rayonner une saveur
+                                d'enfance dans le respect des traditions culinaires.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. POURQUOI CHOISIR EUTOU MAME WOULY (4 BLOCS) -->
+    <!-- ========================================================================= -->
+    <section class="py-16 sm:py-24 bg-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-choc font-semibold text-xs tracking-wider uppercase mb-3">
+                    <i class="fas fa-gem text-brand-gold text-xs"></i>
+                    <span>Nos engagements</span>
+                </div>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-brand-choc leading-tight mb-4">
+                    Pourquoi Choisir Eutou Mame Wouly
+                </h2>
+                <p class="font-sans text-base sm:text-lg text-brand-text/80">
+                    Quatre piliers qui font de notre Mbouraké une référence d'excellence et d'authenticité.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- BLOC 1: AUTHENTICITÉ -->
+                <div
+                    class="reveal p-8 rounded-3xl bg-white border border-brand-gold/25 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-choc text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-choc mb-3">AUTHENTICITÉ</h3>
+                    <p class="text-sm text-brand-text/75 leading-relaxed">
+                        Une marque inspirée d'un héritage familial sénégalais sincère et fidèle aux souvenirs d’enfance.
+                    </p>
+                </div>
+
+                <!-- BLOC 2: TRADITION -->
+                <div
+                    class="reveal p-8 rounded-3xl bg-white border border-brand-gold/25 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-choc text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-choc mb-3">TRADITION</h3>
+                    <p class="text-sm text-brand-text/75 leading-relaxed">
+                        Un produit profondément ancré dans la culture culinaire sénégalaise, apprécié de toutes les
+                        générations.
+                    </p>
+                </div>
+
+                <!-- BLOC 3: PRATICITÉ -->
+                <div
+                    class="reveal p-8 rounded-3xl bg-white border border-brand-gold/25 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-choc text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-boxes-packing"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-choc mb-3">PRATICITÉ</h3>
+                    <p class="text-sm text-brand-text/75 leading-relaxed">
+                        Des formats pensés pour différents usages et besoins : du pot nomade au sachet familial
+                        généreux.
+                    </p>
+                </div>
+
+                <!-- BLOC 4: TRANSMISSION -->
+                <div
+                    class="reveal p-8 rounded-3xl bg-white border border-brand-gold/25 shadow-soft hover:shadow-card hover:-translate-y-1.5 transition-all duration-300">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-choc text-brand-gold flex items-center justify-center text-2xl mb-6 shadow-sm">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-brand-choc mb-3">TRANSMISSION</h3>
+                    <p class="text-sm text-brand-text/75 leading-relaxed">
+                        Faire vivre un savoir-faire et le transmettre aux nouvelles générations avec modernité et
+                        fierté.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 11. GALERIE / UNIVERS DE LA MARQUE (AVEC LIGHTBOX) -->
+    <!-- ========================================================================= -->
+    <!-- section gallerie -->
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal"
+        class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" aria-label="Fermer la vue agrandie"
+            class="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center text-xl transition-colors border border-white/20 z-10">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <div class="max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+            <img id="lightboxImg" src="" alt="Agrandissement"
+                class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-brand-gold/40">
+            <p id="lightboxCaption" class="mt-4 text-brand-cream text-center text-sm font-medium tracking-wide"></p>
+        </div>
+    </div>
+
+    <!-- ========================================================================= -->
+    <!-- 12. CTA COMMANDE (INTERACTIF VIA WHATSAPP) -->
+    <!-- ========================================================================= -->
+    <section id="commander"
+        class="py-16 sm:py-24 bg-brand-choc text-brand-offwhite pattern-dark relative overflow-hidden">
+
+        <!-- Ambient Gold Highlights -->
+        <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-gold/15 blur-3xl pointer-events-none">
+        </div>
+        <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-brand-gold/15 blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-8 relative z-10">
+
+            <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+                <span class="font-script text-3xl sm:text-4xl text-brand-gold block mb-2">Passez votre commande</span>
+                <h2
+                    class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-brand-offwhite leading-tight mb-6">
+                    Le goût authentique vous attend.
+                </h2>
+                <p class="font-sans text-base sm:text-lg text-brand-cream/90 leading-relaxed">
+                    Choisissez votre format et faites entrer une part de l'héritage de Mame Wouly dans votre quotidien.
+                    Votre commande est transmise instantanément sur WhatsApp.
+                </p>
+            </div>
+
+            <!-- Interactive Order Card Form -->
+            <div
+                class="reveal max-w-2xl mx-auto bg-brand-chocDark/95 rounded-3xl p-6 sm:p-10 border border-brand-gold/40 shadow-dark-elevated backdrop-blur-xl">
+
+                <form id="orderForm" onsubmit="event.preventDefault(); sendWhatsAppOrder();" class="space-y-6">
+
+                    <!-- 1. Format Selection -->
+                    <div>
+                        <label class="block text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">
+                            1. Choisissez votre format
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <label class="cursor-pointer relative">
+                                <input type="radio" id="radio-pot500" name="orderFormat" value="Pot Nomade (500 FCFA)" checked class="peer sr-only"
+                                    onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <span class="block font-serif font-bold text-sm sm:text-base">POT NOMADE</span>
+                                    <span class="block text-[11px] text-brand-gold/90 font-medium">500 FCFA</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" id="radio-pot1000" name="orderFormat" value="Maxi Pot Nomade (1.000 FCFA)" class="peer sr-only"
+                                    onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <span class="block font-serif font-bold text-sm sm:text-base">MAXI POT</span>
+                                    <span class="block text-[11px] text-brand-gold/90 font-medium">1.000 FCFA</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" id="radio-sachet500" name="orderFormat" value="Sachet 500 g (1.500 FCFA)" class="peer sr-only"
+                                    onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <span class="block font-serif font-bold text-sm sm:text-base">500 G</span>
+                                    <span class="block text-[11px] text-brand-gold/90 font-medium">1.500 FCFA</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer relative">
+                                <input type="radio" id="radio-sachet1kg" name="orderFormat" value="Sachet 1 kg (3.000 FCFA)" class="peer sr-only"
+                                    onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <span class="block font-serif font-bold text-sm sm:text-base">1 KG</span>
+                                    <span class="block text-[11px] text-brand-gold/90 font-medium">3.000 FCFA</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 2. Recipe Option (Traditionnel ou Sans Sucre) -->
+                    <div>
+                        <label class="block text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">
+                            2. Option de recette
+                        </label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="orderOption" value="Traditionnelle (sucrée)" checked
+                                    class="peer sr-only" onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <i class="fas fa-bowl-rice text-sm text-brand-gold mb-1 block"></i>
+                                    <span class="text-xs font-semibold">Traditionnelle</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="orderOption" value="Sans Sucre" class="peer sr-only"
+                                    onchange="updateOrderSummary()">
+                                <div
+                                    class="p-3 text-center rounded-2xl border border-brand-gold/30 peer-checked:border-brand-gold peer-checked:bg-brand-gold/20 peer-checked:text-white text-brand-cream/80 hover:bg-white/5 transition-all">
+                                    <i class="fas fa-leaf text-sm text-brand-gold mb-1 block"></i>
+                                    <span class="text-xs font-semibold">Sans Sucre</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 3. Quantity Counter -->
+                    <div>
+                        <label class="block text-xs font-bold text-brand-gold uppercase tracking-wider mb-2">
+                            3. Quantité souhaitée
+                        </label>
+                        <div
+                            class="flex items-center justify-between p-3 rounded-2xl border border-brand-gold/30 bg-black/20">
+                            <span class="text-sm text-brand-cream">Nombre d'unités :</span>
+                            <div class="flex items-center gap-3">
+                                <button type="button" onclick="changeQuantity(-1)" aria-label="Diminuer la quantité"
+                                    class="w-9 h-9 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                                    <i class="fas fa-minus text-xs"></i>
+                                </button>
+                                <span id="orderQty"
+                                    class="font-serif font-bold text-xl text-brand-offwhite w-8 text-center">1</span>
+                                <button type="button" onclick="changeQuantity(1)" aria-label="Augmenter la quantité"
+                                    class="w-9 h-9 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                                    <i class="fas fa-plus text-xs"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real-Time Order Summary Preview -->
+                    <div
+                        class="p-4 rounded-2xl bg-brand-choc/80 border border-brand-gold/25 text-xs text-brand-cream/90 flex items-center justify-between">
+                        <span class="text-brand-gold font-medium">Récapitulatif :</span>
+                        <span id="orderSummaryText" class="font-semibold text-brand-offwhite">Format 500 g • Quantité
+                            1</span>
+                    </div>
+
+                    <!-- Submit Order Button via WhatsApp -->
+                    <button type="submit"
+                        class="w-full py-4 px-6 rounded-full bg-gradient-to-r from-brand-gold to-brand-goldLight text-brand-chocDark font-bold text-base shadow-gold hover:shadow-gold-lg hover:brightness-110 active:scale-98 transition-all duration-300 flex items-center justify-center gap-3">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Envoyer la commande via WhatsApp</span>
+                    </button>
+
+                    <p class="text-[12px] text-center text-brand-cream/60">
+                        Un message WhatsApp pré-rempli sera généré automatiquement pour confirmation avec l'équipe.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 13. FOOTER BRUN FONCÉ -->
+    <!-- ========================================================================= -->
+    <footer class="bg-brand-chocDark text-brand-offwhite border-t border-brand-gold/30 pt-12 pb-8 pattern-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
+
+                <!-- Brand identity -->
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="images/logo.png" alt="Logo Eutou Mame Wouly"
+                            class="w-12 h-12 rounded-full border border-brand-gold/40 bg-white"
+                            onerror="this.src='logo.png'">
+                        <div>
+                            <span class="font-serif text-lg font-bold text-brand-offwhite block leading-tight">Eutou
+                                Mame Wouly</span>
+                            <span class="text-xs text-brand-gold font-medium uppercase tracking-wider">Tradition
+                                sénégalaise</span>
+                        </div>
+                    </div>
+                    <p class="font-display italic text-base text-brand-cream/80 mb-6 leading-relaxed">
+                        « Le goût authentique, l’héritage de Mame Wouly »
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="flex items-center gap-3">
+                        <a id="footerInsta" href="#" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram Eutou Mame Wouly"
+                            class="w-10 h-10 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a id="footerTiktok" href="#" target="_blank" rel="noopener noreferrer"
+                            aria-label="TikTok Eutou Mame Wouly"
+                            class="w-10 h-10 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a id="footerFb" href="#" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook Eutou Mame Wouly"
+                            class="w-10 h-10 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a id="footerWa" href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp direct"
+                            class="w-10 h-10 rounded-full bg-brand-choc border border-brand-gold/40 text-brand-gold hover:bg-brand-gold hover:text-brand-chocDark flex items-center justify-center transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="font-serif text-base font-bold text-brand-gold uppercase tracking-wider mb-5">Navigation
+                    </h4>
+                    <ul class="space-y-2.5 text-sm text-brand-cream/80">
+                        <li><a href="#hero" class="hover:text-brand-gold transition-colors">Accueil</a></li>
+                        <li><a href="#histoire" class="hover:text-brand-gold transition-colors">Notre histoire</a></li>
+                        <li><a href="#formats" class="hover:text-brand-gold transition-colors">Nos formats</a></li>
+                        <li><a href="#videos" class="hover:text-brand-gold transition-colors">Savoir-faire</a></li>
+                        <li><a href="#fondatrice" class="hover:text-brand-gold transition-colors">La fondatrice</a></li>
+                    </ul>
+                </div>
+
+                <!-- Formats disponibles -->
+                <div>
+                    <h4 class="font-serif text-base font-bold text-brand-gold uppercase tracking-wider mb-5">Nos
+                        Produits</h4>
+                    <ul class="space-y-2.5 text-sm text-brand-cream/80">
+                        <li class="flex items-center justify-between">
+                            <span>Pot Nomade</span>
+                            <span class="text-xs text-brand-gold font-bold">500 FCFA</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Maxi Pot Gourmand</span>
+                            <span class="text-xs text-brand-gold font-bold">1.000 FCFA</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Mbouraké 500 g</span>
+                            <span class="text-xs text-brand-gold font-bold">1.500 FCFA</span>
+                        </li>
+                        <li class="flex items-center justify-between">
+                            <span>Mbouraké 1 kg</span>
+                            <span class="text-xs text-brand-gold font-bold">3.000 FCFA</span>
+                        </li>
+                        <li class="pt-2 text-xs text-brand-cream/60">
+                            * Déclinaison sans sucre disponible sur demande.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Direct Contact Info -->
+                <div>
+                    <h4 class="font-serif text-base font-bold text-brand-gold uppercase tracking-wider mb-5">Contact &
+                        Commandes</h4>
+                    <ul class="space-y-3 text-sm text-brand-cream/80">
+                        <li class="flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-brand-gold text-base w-5"></i>
+                            <a id="footerContactWa" href="#" class="hover:text-brand-gold transition-colors">WhatsApp :
+                                À renseigner</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-brand-gold text-sm w-5"></i>
+                            <span id="footerContactPhone">Téléphone : À renseigner</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-brand-gold text-sm w-5"></i>
+                            <span id="footerContactEmail">contact@example.com</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-location-dot text-brand-gold text-sm w-5 mt-1"></i>
+                            <span id="footerContactAddr">Dakar, Sénégal</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright Bar -->
+            <div
+                class="pt-8 border-t border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/60 gap-4">
+                <p>© <span id="currentYear">2026</span> Eutou Mame Wouly. Tous droits réservés.</p>
+                <p>Développé par <a href="https://mouhatech.com" target="_blank" rel="noopener noreferrer"
+                        class="text-brand-gold hover:text-brand-goldLight transition-colors">MouhaTech</a></p>
+                <p class="text-brand-gold/80">Spécialité sénégalaise artisanale • Fait avec passion</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========================================================================= -->
+    <!-- FLOATING WHATSAPP BUTTON (MOBILE & DESKTOP) -->
+    <!-- ========================================================================= -->
+    <a id="floatingWhatsApp" href="#" target="_blank" rel="noopener noreferrer"
+        aria-label="Commander directement sur WhatsApp"
+        class="wa-floating-btn fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition-transform duration-300">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========================================================================= -->
+    <!-- JAVASCRIPT VANILLA INTERACTIF & CONFIGURATION -->
+    <!-- ========================================================================= -->
+    <script>
+        /**
+         * DONNÉES CENTRALISÉES FACILEMENT MODIFIABLES
+         * Modifiez les numéros, emails, adresses et prix ici.
+         */
+        const brand = {
+            name: "Eutou Mame Wouly",
+            tagline: "Le goût authentique, l'héritage de Mame Wouly",
+            // Remplacez par le numéro WhatsApp officiel au format international sans espace (ex: "221771234567")
+            whatsapp: "221768191781",
+            phone: "+221 76 819 17 81",
+            email: "#",
+            address: "Dakar, Guédiawaye",
+            instagram: "#",
+            tiktok: "#",
+            facebook: "#"
+        };
+
+        const products = [
+            {
+                id: "pot500",
+                name: "Mbouraké",
+                format: "Pot Nomade",
+                subtitle: "Format découverte",
+                price: "500 FCFA",
+                image: "images/pot.png",
+                description: "Le format nomade compact et pratique, parfait pour une pause gourmande."
+            },
+            {
+                id: "pot1000",
+                name: "Mbouraké",
+                format: "Maxi Pot Nomade",
+                subtitle: "Maxi dôme gourmand",
+                price: "1.000 FCFA",
+                image: "images/pot1000.png",
+                description: "Le double de gourmandise avec son dôme généreux pour les vrais passionnés."
+            },
+            {
+                id: "sachet500",
+                name: "Mbouraké",
+                format: "Sachet 500 g",
+                subtitle: "Format familial",
+                price: "1.500 FCFA",
+                image: "images/500g.png",
+                description: "Un format pratique pour savourer le Mbouraké au quotidien avec vos proches."
+            },
+            {
+                id: "sachet1kg",
+                name: "Mbouraké",
+                format: "Sachet 1 kg",
+                subtitle: "Grand format",
+                price: "3.000 FCFA",
+                image: "images/1kg.png",
+                description: "Idéal pour les grandes familles et les moments de partage conviviaux."
+            }
+        ];
+
+        // State pour le sélecteur de commande
+        let currentQuantity = 1;
+
+        // Initialisation
+        document.addEventListener("DOMContentLoaded", () => {
+            initBrandData();
+            initNavbarScroll();
+            initMobileMenu();
+            initScrollReveal();
+            initDynamicLinks();
+            updateOrderSummary();
+        });
+
+        /**
+         * 1. Injection des données de marque dans l'interface
+         */
+        function initBrandData() {
+            // Année dynamique
+            const currentYearEl = document.getElementById("currentYear");
+            if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+
+            // Données de contact du footer
+            const footerPhone = document.getElementById("footerContactPhone");
+            if (footerPhone) footerPhone.textContent = "Téléphone : " + brand.phone;
+
+            const footerEmail = document.getElementById("footerContactEmail");
+            if (footerEmail) footerEmail.textContent = brand.email;
+
+            const footerAddr = document.getElementById("footerContactAddr");
+            if (footerAddr) footerAddr.textContent = brand.address;
+
+            const footerContactWa = document.getElementById("footerContactWa");
+            if (footerContactWa) {
+                footerContactWa.textContent = "WhatsApp : " + brand.whatsapp;
+                footerContactWa.href = getWhatsAppUrl("Bonjour Eutou Mame Wouly, je souhaite vous contacter.");
+            }
+
+            // Réseaux sociaux
+            const footerInsta = document.getElementById("footerInsta");
+            if (footerInsta) footerInsta.href = brand.instagram;
+
+            const footerTiktok = document.getElementById("footerTiktok");
+            if (footerTiktok) footerTiktok.href = brand.tiktok;
+
+            const footerFb = document.getElementById("footerFb");
+            if (footerFb) footerFb.href = brand.facebook;
+
+            const footerWa = document.getElementById("footerWa");
+            if (footerWa) footerWa.href = getWhatsAppUrl("Bonjour Eutou Mame Wouly, je souhaite commander du Mbouraké.");
+
+            // Bouton WhatsApp flottant
+            const floatingWa = document.getElementById("floatingWhatsApp");
+            if (floatingWa) {
+                floatingWa.href = getWhatsAppUrl("Bonjour Eutou Mame Wouly, je souhaite commander du Mbouraké.");
+            }
+        }
+
+        /**
+         * 2. Génération des liens WhatsApp
+         */
+        function getWhatsAppUrl(message) {
+            const cleanPhone = brand.whatsapp.replace(/[^0-9]/g, "");
+            const encodedMsg = encodeURIComponent(message);
+            return `https://wa.me/${cleanPhone}?text=${encodedMsg}`;
+        }
+
+        /**
+         * 3. Navbar Fixe permanente (état actuel verrouillé)
+         */
+        function initNavbarScroll() {
+            // Le menu reste fixé en permanence dans son état actuel sans disparaître ni réapparaître
+        }
+
+        /**
+         * 4. Menu Mobile (sans overlay)
+         */
+        function initMobileMenu() {
+            const btn = document.getElementById("mobileMenuBtn");
+            const menu = document.getElementById("mobileMenu");
+            const line1 = document.getElementById("menuLine1");
+            const line2 = document.getElementById("menuLine2");
+            const line3 = document.getElementById("menuLine3");
+            const navLinks = document.querySelectorAll(".mobile-nav-link");
+
+            let isOpen = false;
+
+            function toggleMenu() {
+                isOpen = !isOpen;
+                if (isOpen) {
+                    menu.classList.remove("hidden");
+                    line1.classList.add("rotate-45", "translate-y-[8px]");
+                    line2.classList.add("opacity-0");
+                    line3.classList.add("-rotate-45", "-translate-y-[8px]");
+                } else {
+                    menu.classList.add("hidden");
+                    line1.classList.remove("rotate-45", "translate-y-[8px]");
+                    line2.classList.remove("opacity-0");
+                    line3.classList.remove("-rotate-45", "-translate-y-[8px]");
+                }
+            }
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+            // Fermeture au clic à l'extérieur
+            document.addEventListener("click", (e) => {
+                if (isOpen && !menu.contains(e.target) && !btn.contains(e.target)) {
+                    toggleMenu();
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    if (isOpen) toggleMenu();
+                });
+            });
+        }
+
+        /**
+         * 5. Animations IntersectionObserver au scroll
+         */
+        function initScrollReveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -40px 0px"
+            });
+
+            reveals.forEach(el => observer.observe(el));
+        }
+
+        /**
+         * 6. Accordéon FAQ
+         */
+        function toggleFaq(button) {
+            const currentItem = button.closest(".faq-item");
+            const answer = currentItem.querySelector(".faq-answer");
+            const icon = button.querySelector("i");
+            const allItems = document.querySelectorAll(".faq-item");
+
+            // Fermer les autres questions
+            allItems.forEach(item => {
+                if (item !== currentItem) {
+                    const otherAnswer = item.querySelector(".faq-answer");
+                    const otherIcon = item.querySelector("button i");
+                    otherAnswer.style.maxHeight = null;
+                    otherIcon.classList.remove("rotate-180");
+                }
+            });
+
+            // Ouvrir ou fermer la sélectionnée
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                icon.classList.remove("rotate-180");
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.classList.add("rotate-180");
+            }
+        }
+
+        /**
+         * 7. Lightbox Galerie
+         */
+        function openLightbox(src, caption) {
+            const modal = document.getElementById("lightboxModal");
+            const img = document.getElementById("lightboxImg");
+            const cap = document.getElementById("lightboxCaption");
+
+            img.src = src;
+            cap.textContent = caption || "";
+            modal.classList.remove("opacity-0", "pointer-events-none");
+            modal.classList.add("opacity-100", "pointer-events-auto");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById("lightboxModal");
+            modal.classList.remove("opacity-100", "pointer-events-auto");
+            modal.classList.add("opacity-0", "pointer-events-none");
+            document.body.style.overflow = "";
+        }
+
+        // Fermeture lightbox au clic hors de l'image ou touche Echap
+        document.getElementById("lightboxModal")?.addEventListener("click", (e) => {
+            if (e.target.id === "lightboxModal") closeLightbox();
+        });
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeLightbox();
+        });
+
+        /**
+         * 8. Gestion des Quantités du Formulaire
+         */
+        function changeQuantity(delta) {
+            currentQuantity = Math.max(1, currentQuantity + delta);
+            const qtyEl = document.getElementById("orderQty");
+            if (qtyEl) qtyEl.textContent = currentQuantity;
+            updateOrderSummary();
+        }
+
+        /**
+         * 9. Mise à jour du récapitulatif de commande
+         */
+        function updateOrderSummary() {
+            const selectedFormat = document.querySelector('input[name="orderFormat"]:checked')?.value || "Pot Nomade (500 FCFA)";
+            const selectedOption = document.querySelector('input[name="orderOption"]:checked')?.value || "Traditionnelle (sucrée)";
+            const summaryEl = document.getElementById("orderSummaryText");
+            if (summaryEl) {
+                summaryEl.textContent = `Format : ${selectedFormat} (${selectedOption}) • Quantité : ${currentQuantity}`;
+            }
+        }
+
+        /**
+         * 10. Commande Directe depuis les Cartes Produits
+         */
+        function handleDirectOrder(formatKey) {
+            // Défilement fluide vers la section commande avec présélection
+            const radio = document.getElementById('radio-' + formatKey);
+            if (radio) {
+                radio.checked = true;
+            } else {
+                const radios = document.querySelectorAll('input[name="orderFormat"]');
+                radios.forEach(r => {
+                    if (r.value.toLowerCase().includes(formatKey.toLowerCase())) {
+                        r.checked = true;
+                    }
+                });
+            }
+            updateOrderSummary();
+
+            const commanderSection = document.getElementById("commander");
+            if (commanderSection) {
+                commanderSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        /**
+         * 11. Envoi de la commande WhatsApp personnalisée
+         */
+        function sendWhatsAppOrder() {
+            const format = document.querySelector('input[name="orderFormat"]:checked')?.value || "Pot Nomade (500 FCFA)";
+            const option = document.querySelector('input[name="orderOption"]:checked')?.value || "Traditionnelle";
+            const qty = currentQuantity;
+
+            const message = `Bonjour Eutou Mame Wouly, je souhaite commander :
+Format : ${format}
+Option : ${option}
+Quantité : ${qty}`;
+
+            window.open(getWhatsAppUrl(message), "_blank");
+        }
+
+        /**
+         * 12. Initialisation des liens dynamiques
+         */
+        function initDynamicLinks() {
+            // Préparation des vidéos : contrôle du play/pause simple
+            const videos = document.querySelectorAll("video");
+            videos.forEach(v => {
+                v.addEventListener("play", () => {
+                    videos.forEach(other => {
+                        if (other !== v) other.pause();
+                    });
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>
