@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth scroll-pt-20 lg:scroll-pt-24">
+<html lang="fr" class="scroll-smooth scroll-pt-20 lg:scroll-pt-24 overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Eutou Mame Wouly | Mbouraké Sénégal</title>
 
     <!-- SEO & Meta Tags -->
     <meta name="description"
         content="Découvrez Eutou Mame Wouly, une marque sénégalaise spécialisée dans le Mbouraké, entre tradition, savoir-faire familial et modernité.">
     <meta name="keywords"
-        content="Mbouraké, Eutou Mame Wouly, Sénégal, gastronomie sénégalaise, produit artisanal, Mame Wouly, Roumana Toure">
+        content="Mbouraké, Eutou Mame Wouly, Sénégal, gastronomie sénégalaise, produit artisanal, Mame Wouly, Roumana Touré">
     <meta name="author" content="Eutou Mame Wouly">
 
     <!-- Open Graph / Facebook -->
@@ -75,6 +75,20 @@
 
     <!-- Custom CSS for Premium Finish -->
     <style>
+        /* Prevent horizontal scroll globally across mobile and desktop */
+        html,
+        body {
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Ensure images and media never exceed container width */
+        img, video, iframe, canvas, svg {
+            max-width: 100%;
+        }
+
         /* Smooth Scrollbar Customization */
         ::-webkit-scrollbar {
             width: 10px;
@@ -223,28 +237,28 @@
     </style>
 </head>
 
-<body class="bg-brand-offwhite text-brand-text font-sans antialiased selection:bg-brand-gold selection:text-white">
+<body class="bg-brand-offwhite text-brand-text font-sans antialiased selection:bg-brand-gold selection:text-white overflow-x-hidden w-full max-w-full relative">
 
     <!-- ========================================================================= -->
     <!-- 1. NAVBAR PREMIUM -->
     <!-- ========================================================================= -->
     <header id="mainNavbar"
-        class="fixed top-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md shadow-soft border-b border-brand-gold/25 py-3 sm:py-3.5 px-4 sm:px-8">
+        class="fixed top-0 left-0 right-0 z-50 bg-brand-offwhite/95 backdrop-blur-md shadow-soft border-b border-brand-gold/25 py-3 sm:py-3.5 px-4 sm:px-8 w-full max-w-full">
         <div class="max-w-7xl mx-auto flex items-center justify-between relative z-50">
 
             <!-- Brand Logo & Name -->
-            <a href="#hero" class="flex items-center gap-3.5 group" aria-label="Eutou Mame Wouly - Accueil">
+            <a href="#hero" class="flex items-center gap-3 sm:gap-3.5 group min-w-0" aria-label="Eutou Mame Wouly - Accueil">
                 <div
-                    class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden p-0.5 border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 bg-white">
+                    class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden p-0.5 border border-brand-gold/40 shadow-sm transition-transform duration-300 group-hover:scale-105 bg-white shrink-0">
                     <img src="images/logo.png" alt="Logo Eutou Mame Wouly"
                         class="w-full h-full object-cover rounded-full" onerror="this.src='logo.png'">
                 </div>
-                <div class="flex flex-col">
+                <div class="flex flex-col min-w-0">
                     <span
-                        class="font-serif text-lg sm:text-xl font-bold tracking-tight text-brand-choc leading-tight group-hover:text-brand-gold transition-colors">
+                        class="font-serif text-lg sm:text-xl font-bold tracking-tight text-brand-choc leading-tight group-hover:text-brand-gold transition-colors truncate">
                         EUTOU MAME WOULY
                     </span>
-                    <span class="font-sans text-[11px] sm:text-xs text-brand-gold font-medium tracking-wide uppercase">
+                    <span class="font-sans text-[11px] sm:text-xs text-brand-gold font-medium tracking-wide uppercase truncate">
                         Mbouraké Traditionnel
                     </span>
                 </div>
@@ -279,7 +293,7 @@
 
             <!-- Mobile Hamburger Button -->
             <button id="mobileMenuBtn" aria-label="Ouvrir le menu de navigation"
-                class="lg:hidden w-11 h-11 rounded-full flex flex-col items-center justify-center gap-1.5 border border-brand-gold/40 text-brand-choc hover:bg-brand-cream/50 transition-colors">
+                class="lg:hidden w-11 h-11 rounded-full flex flex-col items-center justify-center gap-1.5 border border-brand-gold/40 text-brand-choc hover:bg-brand-cream/50 transition-colors shrink-0">
                 <span class="w-5 h-[2px] bg-brand-choc transition-transform origin-center" id="menuLine1"></span>
                 <span class="w-5 h-[2px] bg-brand-choc transition-opacity" id="menuLine2"></span>
                 <span class="w-5 h-[2px] bg-brand-choc transition-transform origin-center" id="menuLine3"></span>
@@ -378,22 +392,22 @@
 
                 <!-- Tagline / Trust Line -->
                 <div
-                    class="pt-6 border-t border-brand-gold/25 flex flex-wrap items-center gap-y-2 text-xs sm:text-sm text-brand-cream/80 font-medium">
+                    class="pt-6 border-t border-brand-gold/25 flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm text-brand-cream/80 font-medium">
                     <span class="flex items-center gap-2">
                         <i class="fas fa-check-circle text-brand-gold text-xs"></i>
                         Une recette traditionnelle
                     </span>
-                    <span class="mx-3 text-brand-gold/40">•</span>
+                    <span class="text-brand-gold/40 hidden sm:inline">•</span>
                     <span class="flex items-center gap-2">
                         <i class="fas fa-heart text-brand-gold text-xs"></i>
                         Un savoir-faire familial
                     </span>
-                    <span class="mx-3 text-brand-gold/40">•</span>
+                    <span class="text-brand-gold/40 hidden sm:inline">•</span>
                     <span class="flex items-center gap-2">
                         <i class="fas fa-star text-brand-gold text-xs"></i>
                         Une marque sénégalaise
                     </span>
-                    <span class="mx-3 text-brand-gold/40 lg:hidden">•</span>
+                    <span class="text-brand-gold/40 hidden sm:inline lg:hidden">•</span>
                     <span class="flex items-center gap-2 lg:hidden">
                         <i class="fas fa-award text-brand-gold text-xs"></i>
                         Une saveur délicieuse
@@ -475,7 +489,7 @@
 
                         <!-- Golden Glow Frame Behind -->
                         <div
-                            class="absolute -inset-3 rounded-3xl bg-gradient-to-tr from-brand-gold/30 via-brand-beige to-brand-gold/10 -rotate-2 transform">
+                            class="absolute -inset-2 sm:-inset-3 rounded-3xl bg-gradient-to-tr from-brand-gold/30 via-brand-beige to-brand-gold/10 -rotate-2 transform">
                         </div>
 
                         <!-- Image Card -->
@@ -497,7 +511,7 @@
     <!-- ========================================================================= -->
     <!-- 4. NOS FORMATS -->
     <!-- ========================================================================= -->
-    <section id="formats" class="py-24 sm:py-32 bg-brand-offwhite relative">
+    <section id="formats" class="py-24 sm:py-32 bg-brand-offwhite relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
             <!-- Section Header -->
@@ -1008,7 +1022,7 @@
     <!-- ========================================================================= -->
     <!-- 8. LA FONDATRICE (ROUMANA TOURE) -->
     <!-- ========================================================================= -->
-    <section id="fondatrice" class="py-16 sm:py-24 bg-brand-offwhite relative">
+    <section id="fondatrice" class="py-16 sm:py-24 bg-brand-offwhite relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -1019,21 +1033,21 @@
 
                         <!-- Golden Offset Frame -->
                         <div
-                            class="absolute -inset-4 rounded-3xl bg-brand-beige border border-brand-gold/40 rotate-1 shadow-card">
+                            class="absolute -inset-2 sm:-inset-4 rounded-3xl bg-brand-beige border border-brand-gold/40 rotate-1 shadow-card">
                         </div>
 
                         <!-- Main Founder Photo with Product -->
                         <div
                             class="relative rounded-2xl overflow-hidden shadow-2xl border border-brand-gold/50 bg-white">
                             <img src="images/WhatsApp Image 2026-09-24 at 13.58.08.jpeg"
-                                alt="Roumana Toure avec le produit Eutou Mame Wouly"
+                                alt="Roumana Touré avec le produit Eutou Mame Wouly"
                                 class="w-full h-auto object-cover hover:scale-102 transition-transform duration-700"
                                 onerror="this.src='WhatsApp Image 2026-09-24 at 13.58.08.jpeg'">
 
                             <!-- Floating Pill on Image -->
                             <div
                                 class="absolute bottom-4 left-4 right-4 bg-brand-chocDark/90 backdrop-blur-md p-4 rounded-xl border border-brand-gold/40 text-center">
-                                <p class="font-serif text-lg font-bold text-brand-offwhite">Roumana Toure</p>
+                                <p class="font-serif text-lg font-bold text-brand-offwhite">Roumana Touré</p>
                                 <p class="text-xs text-brand-gold font-medium uppercase tracking-wider">Fondatrice / PDG
                                 </p>
                             </div>
@@ -1057,7 +1071,7 @@
                     </h2>
 
                     <p class="text-sm font-semibold text-brand-gold mb-6 uppercase tracking-wider">
-                        Roumana Toure • Fondatrice / PDG
+                        Roumana Touré • Fondatrice / PDG
                     </p>
 
                     <p class="font-sans text-base sm:text-lg text-brand-text/85 leading-relaxed mb-6 font-normal">
@@ -1074,7 +1088,7 @@
                             transmis. »
                         </p>
                         <span class="block mt-3 text-xs uppercase tracking-widest text-brand-gold font-bold">
-                            — Roumana Toure
+                            — Roumana Touré
                         </span>
                     </div>
 
@@ -1103,7 +1117,7 @@
     <!-- ========================================================================= -->
     <!-- 10. POURQUOI CHOISIR EUTOU MAME WOULY (4 BLOCS) -->
     <!-- ========================================================================= -->
-    <section class="py-16 sm:py-24 bg-brand-cream relative">
+    <section class="py-16 sm:py-24 bg-brand-cream relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -1362,7 +1376,7 @@
     <!-- ========================================================================= -->
     <!-- 13. FOOTER BRUN FONCÉ -->
     <!-- ========================================================================= -->
-    <footer class="bg-brand-chocDark text-brand-offwhite border-t border-brand-gold/30 pt-12 pb-8 pattern-dark">
+    <footer class="bg-brand-chocDark text-brand-offwhite border-t border-brand-gold/30 pt-12 pb-8 pattern-dark relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-8">
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
